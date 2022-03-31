@@ -13,13 +13,23 @@ The `filter()` method returns new array with all the elements that satisfy the c
 
 The `Callback Function` is invoked with three arguments:
 
--> The value of the element
+* The value of the element
 
--> The index of the element
+* The index of the element
 
--> The array
+* The array
 
 `ArrayMethod(()=>{/*...*/})` or `ArrayMethod(function(){/*...*/})`
+
+```
+const numbersArray = [1, 2, 3, 4, 5];
+
+const numbersDivisibleByTwo = numbersArray.filter((number) => !(number % 2));
+
+console.log(numbersDivisibleByTwo);
+///Will print:
+[2,4]
+```
 
 2. `map()`:
 
@@ -27,13 +37,37 @@ The `map()` method returns a new array containing manipulated element properties
 
 The `Callback Function` is invoked with three arguments:
 
--> The value of the element
+* The value of the element
 
--> The index of the element
+* The index of the element
 
--> The array
+* The array
 
 `ArrayMethod(()=>{/*...*/})` or `ArrayMethod(function(){/*...*/})`
+
+```
+const people = [
+  { name: "Themba", gender: "male" },
+  { name: " Thandi", gender: "female" },
+  { name: "Lerato", gender: "female" }
+];
+
+const allNames = people.map((person) => person.name);
+
+console.log(allNames);
+///Will print:
+[ 'Themba', ' Thandi', 'Lerato' ]
+```
+
+```
+const numbersArray = [1, 2, 3, 4, 5];
+
+const numbersMultipliedByTwo = numbersArray.map((number) => number * 2);
+
+console.log(numbersMultipliedByTwo);
+///Will print:
+[ 2, 4, 6, 8, 10 ]
+```
 
 3. `forEach()`:
 
@@ -41,11 +75,11 @@ The `forEach()` method runs the logic provided in the `Callback Function` on eac
 
 The `Callback Function` is invoked with three arguments:
 
--> The value of the element
+* The value of the element
 
--> The index of the element
+* The index of the element
 
--> The array
+* The array
 
 `ArrayMethod(()=>{/*...*/})` or `ArrayMethod(function(){/*...*/})`
 
@@ -55,13 +89,13 @@ The `reduce()` method runs a reducer `Callback Function` and returns a single va
 
 The `Callback Function` passed in the reduce method is invoked with four arguments:
 
--> The previous value
+* The previous value
 
--> The current value
+* The current value
 
--> The current index
+* The current index
 
--> The array
+* The array
 
 `reduce((previousValue,currentValue,currentIndex,array)=>{/*...*/})` or `reduce(function(previousValue,currentValue,currentIndex,array){/*...*/})`
 
@@ -71,9 +105,9 @@ The `sort()` method returns an array of sorted elements in ascending or descendi
 
 The `Callback Function` passed in the `sort()` method is invoked with two arguments:
 
--> `a` the first element for comparison
+* `a` the first element for comparison
 
--> `b` the second element for comparison
+* `b` the second element for comparison
 
 `sort((a,b)=>{/*...*/})` or `sort(function(a,b){/*...*/})`
 
