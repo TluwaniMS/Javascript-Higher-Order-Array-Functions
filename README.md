@@ -83,6 +83,20 @@ The `Callback Function` is invoked with three arguments:
 
 `ArrayMethod(()=>{/*...*/})` or `ArrayMethod(function(){/*...*/})`
 
+```
+const people = [{ name: "Themba" }, { name: " Thandi" }, { name: "Lerato" }];
+
+people.forEach((person) => (person.email = `${person.name}@mock.com`));
+
+console.log(people);
+///Will print:
+[
+  { name: 'Themba', email: 'Themba@mock.com' },
+  { name: ' Thandi', email: ' Thandi@mock.com' },
+  { name: 'Lerato', email: 'Lerato@mock.com' }
+]
+```
+
 4. `reduce()`:
 
 The `reduce()` method runs a reducer `Callback Function` and returns a single value.
