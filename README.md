@@ -113,9 +113,19 @@ The `Callback Function` passed in the reduce method is invoked with four argumen
 
 `reduce((previousValue,currentValue,currentIndex,array)=>{/*...*/})` or `reduce(function(previousValue,currentValue,currentIndex,array){/*...*/})`
 
+```
+const numbersArray = [1, 2, 3, 4, 5];
+
+const numbersSummed = numbersArray.reduce((previousValue, currentValue) => previousValue + currentValue);
+
+console.log(numbersSummed);
+///Will print:
+15
+```
+
 5. `sort()`:
 
-The `sort()` method returns an array of sorted elements in ascending or descending order depending on the `Callback Function` passed in.
+The `sort()` method sorts the elements in an array in ascending or descending order depending on the `Callback Function` passed in.
 
 The `Callback Function` passed in the `sort()` method is invoked with two arguments:
 
@@ -125,6 +135,28 @@ The `Callback Function` passed in the `sort()` method is invoked with two argume
 
 `sort((a,b)=>{/*...*/})` or `sort(function(a,b){/*...*/})`
 
-The `sort()` method by default sorts values as strings and sorts them in ascending order;
+```
+/// sorting numbers in ascending order
+const numbersArray = [3, 5, 2, 1, 4];
+
+numbersArray.sort((a, b) => a - b);
+
+console.log(numbersArray);
+/// Will print:
+[ 1, 2, 3, 4, 5 ]
+```
+
+```
+/// sorting numbers in descending order
+const numbersArray = [3, 5, 2, 1, 4];
+
+numbersArray.sort((a, b) => b - a);
+
+console.log(numbersArray);
+/// Will print:
+[ 5, 4, 3, 2, 1 ]
+```
+
+The `sort()` method by default sorts the values in an array as strings and sorts them in ascending order;
 
 if ever an array of integers is passed the elements will be converted to strings and sorted according to eacch characters Unicode code point value.
