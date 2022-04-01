@@ -27,8 +27,8 @@ const numbersArray = [1, 2, 3, 4, 5];
 const numbersDivisibleByTwo = numbersArray.filter((number) => !(number % 2));
 
 console.log(numbersDivisibleByTwo);
-///Will print:
-[2,4]
+/// Will print:
+/// [2,4]
 ```
 
 2. `map()`:
@@ -55,8 +55,8 @@ const people = [
 const allNames = people.map((person) => person.name);
 
 console.log(allNames);
-///Will print:
-[ 'Themba', ' Thandi', 'Lerato' ]
+/// Will print:
+/// [ 'Themba', ' Thandi', 'Lerato' ]
 ```
 
 ```
@@ -65,8 +65,8 @@ const numbersArray = [1, 2, 3, 4, 5];
 const numbersMultipliedByTwo = numbersArray.map((number) => number * 2);
 
 console.log(numbersMultipliedByTwo);
-///Will print:
-[ 2, 4, 6, 8, 10 ]
+/// Will print:
+/// [ 2, 4, 6, 8, 10 ]
 ```
 
 3. `forEach()`:
@@ -89,12 +89,12 @@ const people = [{ name: "Themba" }, { name: " Thandi" }, { name: "Lerato" }];
 people.forEach((person) => (person.email = `${person.name}@mock.com`));
 
 console.log(people);
-///Will print:
-[
+/// Will print:
+/* [
   { name: 'Themba', email: 'Themba@mock.com' },
   { name: ' Thandi', email: ' Thandi@mock.com' },
   { name: 'Lerato', email: 'Lerato@mock.com' }
-]
+]*/
 ```
 
 4. `reduce()`:
@@ -119,8 +119,8 @@ const numbersArray = [1, 2, 3, 4, 5];
 const numbersSummed = numbersArray.reduce((previousValue, currentValue) => previousValue + currentValue);
 
 console.log(numbersSummed);
-///Will print:
-15
+/// Will print:
+/// 15
 ```
 
 5. `sort()`:
@@ -143,7 +143,7 @@ numbersArray.sort((a, b) => a - b);
 
 console.log(numbersArray);
 /// Will print:
-[ 1, 2, 3, 4, 5 ]
+/// [ 1, 2, 3, 4, 5 ]
 ```
 
 ```
@@ -154,7 +154,7 @@ numbersArray.sort((a, b) => b - a);
 
 console.log(numbersArray);
 /// Will print:
-[ 5, 4, 3, 2, 1 ]
+/// [ 5, 4, 3, 2, 1 ]
 ```
 
 The `sort()` method by default sorts the values in an array as strings and sorts them in ascending order;
