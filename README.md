@@ -116,7 +116,7 @@ The `Callback Function` passed in the reduce method is invoked with four argumen
 ```
 const numbersArray = [1, 2, 3, 4, 5];
 
-const numbersSummed = numbersArray.reduce((previousValue, currentValue) => previousValue + currentValue);
+const numbersSummed = numbersArray.reduce((previousValue, currentValue) => {return previousValue + currentValue},0);
 
 console.log(numbersSummed);
 /// Will print:
